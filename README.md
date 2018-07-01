@@ -27,6 +27,10 @@ If you use the [npm package manager](https://www.npmjs.com/), you can fetch a lo
 ```bash
 npm install Leaflet.Deflate@1.0.0-alpha.2
 ```
+改成
+```bash
+cnpm install https://github.com/gisxiaowei/Leaflet.Deflate --save
+```
 
 You will find a copy of the release files in `node_modules/Leaflet.Deflate/dist`.
 
