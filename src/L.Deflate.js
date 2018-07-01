@@ -3,7 +3,8 @@ L.Deflate = L.FeatureGroup.extend({
         minSize: 10,
         markerCluster: false,
         markerOptions: {},
-        markerClusterOptions: {}
+        markerClusterOptions: {},
+		level: 16
     },
 
     initialize: function (options) {
@@ -13,14 +14,15 @@ L.Deflate = L.FeatureGroup.extend({
     },
 
     _isCollapsed: function(path, zoom) {
-        var bounds = path.getBounds();
+        /*var bounds = path.getBounds();
 
         var ne_px = this._map.project(bounds.getNorthEast(), zoom);
         var sw_px = this._map.project(bounds.getSouthWest(), zoom);
 
         var width = ne_px.x - sw_px.x;
         var height = sw_px.y - ne_px.y;
-        return (height < this.options.minSize || width < this.options.minSize);
+        return (height < this.options.minSize || width < this.options.minSize);*/
+		return zoom <= this.options.level; 
     },
 
     _getZoomThreshold: function(path) {
